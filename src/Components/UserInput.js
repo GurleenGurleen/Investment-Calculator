@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const UserInput = () => {
+const UserInput = (props) => {
 
     const Initial = {
         currentSaving: 0,
@@ -22,7 +22,7 @@ const UserInput = () => {
 
     const submitHandler = (event) => {
         event.preventDefault();
-        console.log(userInput)
+        props.onCalculate(userInput)
 
     }
 
